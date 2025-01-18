@@ -1,0 +1,1023 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unexpected NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        }, {
+          "id" : "utbot.exception.ClassCastException",
+          "name" : "ClassCastException",
+          "shortDescription" : {
+            "text" : "Unexpected ClassCastException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ClassCastException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ClassCastException.html"
+          }
+        }, {
+          "id" : "utbot.exception.IllegalArgumentException",
+          "name" : "IllegalArgumentException",
+          "shortDescription" : {
+            "text" : "Unexpected IllegalArgumentException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception IllegalArgumentException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html"
+          }
+        }, {
+          "id" : "utbot.exception.UnsupportedOperationException",
+          "name" : "UnsupportedOperationException",
+          "shortDescription" : {
+            "text" : "Unexpected UnsupportedOperationException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception UnsupportedOperationException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html"
+          }
+        }, {
+          "id" : "utbot.exception.TimeoutException",
+          "name" : "TimeoutException",
+          "shortDescription" : {
+            "text" : "Unexpected TimeoutException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception TimeoutException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/TimeoutException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `setAllowedFields(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 52,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 81,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testSetAllowedFields_ThrowNullPointerException(VisitControllerTest.java:84)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 84,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.setAllowedFields(VisitController.java:52)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 52,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `loadPetWithVisit(-255, -255, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 66,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 136,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testLoadPetWithVisit_ThrowNullPointerException(VisitControllerTest.java:140)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 140,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:66)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 66
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `loadPetWithVisit(-255, -256, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 70,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 151,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testLoadPetWithVisit_ThrowNullPointerException_1(VisitControllerTest.java:159)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 159,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:70)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 70
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.ClassCastException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected ClassCastException: class [I cannot be cast to class org.springframework.samples.petclinic.owner.Owner ([I is in module java.base of loader 'bootstrap'; org.springframework.samples.petclinic.owner.Owner is in unnamed module of loader org.utbot.instrumentation.process.HandlerClassesLoader @2474defa).\nTest case: `loadPetWithVisit(-255, -255, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 66,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 119,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testLoadPetWithVisit_ThrowClassCastException(VisitControllerTest.java:126)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 126,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:66)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 66,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.IllegalArgumentException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected IllegalArgumentException: Owner not found with id: -255. Please ensure the ID is correct .\nTest case: `loadPetWithVisit(-255, -255, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 66,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 101,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testLoadPetWithVisit_ThrowIllegalArgumentException(VisitControllerTest.java:109)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 109,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:66)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 66,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.Optional.orElseThrow(Optional.java:403)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/Optional.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 403
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.lambda$loadPetWithVisit$0(VisitController.java:66)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 66,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `loadPetWithVisit(2147483647, -1, <Map>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 69,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 192,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testLoadPetWithVisitThrowsNPEWithCornerCase(VisitControllerTest.java:198)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 198,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:69)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 69,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.UnsupportedOperationException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected UnsupportedOperationException.\nTest case: `loadPetWithVisit(-2147221504, 2147483647, <Map>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 70,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 171,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testLoadPetWithVisitThrowsUOEWithCornerCase(VisitControllerTest.java:183)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 183,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:70)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 70,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.AbstractMap.put(AbstractMap.java:209)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/AbstractMap.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 209
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.TimeoutException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected behavior: Timeout 1 ms for phase InvocationPhase elapsed, controller timeout - 2.\nTest case: `loadPetWithVisit(-2036091383, -1882689467, <Map>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 63,
+            "startColumn" : 2
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 228,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testLoadPetWithVisit(VisitControllerTest.java:109)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 109,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `loadPetWithVisit(0, 0, <LinkedHashMap>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 74,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 281,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testLoadPetWithVisit2(VisitControllerTest.java:291)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 291,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.loadPetWithVisit(VisitController.java:74)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 74,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.TimeoutException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected behavior: Timeout 0 ms for phase InvocationPhase elapsed, controller timeout - 1.\nTest case: `initNewVisitForm()`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 81,
+            "startColumn" : 2
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 345,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testInitNewVisitForm(VisitControllerTest.java:328)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 328,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `processNewVisitForm(null, -255, null, null, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 90,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 452,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testProcessNewVisitForm_ThrowNullPointerException(VisitControllerTest.java:420)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 420,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.processNewVisitForm(VisitController.java:90)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 90,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `processNewVisitForm(null, -255, null, <BindingResult>, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 94,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 414,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testProcessNewVisitForm_ThrowNullPointerException_1(VisitControllerTest.java:420)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 420,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.processNewVisitForm(VisitController.java:94)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 94,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NullPointerException.\nTest case: `processNewVisitForm(<Owner>, -255, null, <BindingResult>, null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 96,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.owner.VisitController"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VisitControllerTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 433,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VisitControllerTest.testProcessNewVisitForm_ThrowNullPointerException_2(VisitControllerTest.java:442)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VisitControllerTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 442,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.owner.VisitController.processNewVisitForm(VisitController.java:96)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/owner/VisitController.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 96,
+                  "startColumn" : 3
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

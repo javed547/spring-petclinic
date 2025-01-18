@@ -1,0 +1,942 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.exception.ExceptionInInitializerError",
+          "name" : "ExceptionInInitializerError",
+          "shortDescription" : {
+            "text" : "Unexpected ExceptionInInitializerError detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ExceptionInInitializerError might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ExceptionInInitializerError.html"
+          }
+        }, {
+          "id" : "utbot.exception.NoClassDefFoundError",
+          "name" : "NoClassDefFoundError",
+          "shortDescription" : {
+            "text" : "Unexpected NoClassDefFoundError detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NoClassDefFoundError might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NoClassDefFoundError.html"
+          }
+        }, {
+          "id" : "utbot.exception.UnsupportedOperationException",
+          "name" : "UnsupportedOperationException",
+          "shortDescription" : {
+            "text" : "Unexpected UnsupportedOperationException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception UnsupportedOperationException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.exception.ExceptionInInitializerError",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected ExceptionInInitializerError.\nTest case: `getSpecialties()`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/vet/Vet.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 63,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.vet.Vet"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VetTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 80,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VetTest.testGetSpecialties(VetTest.java:80)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VetTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 80,
+                  "startColumn" : 2
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.vet.Vet.getSpecialties(Vet.java:63)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/vet/Vet.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 63,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.support.PropertyComparator.sort(PropertyComparator.java:138)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/support/PropertyComparator.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 138
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.ArrayList.sort(ArrayList.java:1721)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/ArrayList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1721
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.Arrays.sort(Arrays.java:1307)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/Arrays.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1307
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.TimSort.sort(TimSort.java:220)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/TimSort.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 220
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/TimSort.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 355
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.support.PropertyComparator.compare(PropertyComparator.java:78)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/support/PropertyComparator.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 78
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.support.PropertyComparator.getPropertyValue(PropertyComparator.java:119)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/support/PropertyComparator.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 119
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:617)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/AbstractNestablePropertyAccessor.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 617
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:625)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/AbstractNestablePropertyAccessor.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 625
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.BeanWrapperImpl.getLocalPropertyHandler(BeanWrapperImpl.java:61)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/BeanWrapperImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 61
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.BeanWrapperImpl.getLocalPropertyHandler(BeanWrapperImpl.java:196)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/BeanWrapperImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 196
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.BeanWrapperImpl.getCachedIntrospectionResults(BeanWrapperImpl.java:165)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/BeanWrapperImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 165
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.CachedIntrospectionResults.forClass(CachedIntrospectionResults.java:155)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/CachedIntrospectionResults.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 155
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.CachedIntrospectionResults.<init>(CachedIntrospectionResults.java:277)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/CachedIntrospectionResults.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 277
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.CachedIntrospectionResults.buildGenericTypeAwarePropertyDescriptor(CachedIntrospectionResults.java:398)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/CachedIntrospectionResults.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 398
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.GenericTypeAwarePropertyDescriptor.<init>(GenericTypeAwarePropertyDescriptor.java:123)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/GenericTypeAwarePropertyDescriptor.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 123
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forMethodReturnType(ResolvableType.java:1359)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1359
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1399)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1399
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1432)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1432
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1450)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1450
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forType(ResolvableType.java:1529)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1529
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:111)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/SerializableTypeWrapper.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 111
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.NoClassDefFoundError",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected NoClassDefFoundError: Could not initialize class org.springframework.core.NativeDetector.\nTest case: `getSpecialties()`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/vet/Vet.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 63,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.vet.Vet"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VetTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 146,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VetTest.testGetSpecialties3(VetTest.java:157)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VetTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 157,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.vet.Vet.getSpecialties(Vet.java:63)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/vet/Vet.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 63,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.support.PropertyComparator.sort(PropertyComparator.java:138)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/support/PropertyComparator.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 138
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.ArrayList.sort(ArrayList.java:1721)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/ArrayList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1721
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.Arrays.sort(Arrays.java:1307)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/Arrays.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1307
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.TimSort.sort(TimSort.java:220)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/TimSort.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 220
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/TimSort.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 355
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.support.PropertyComparator.compare(PropertyComparator.java:78)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/support/PropertyComparator.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 78
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.support.PropertyComparator.getPropertyValue(PropertyComparator.java:119)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/support/PropertyComparator.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 119
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:617)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/AbstractNestablePropertyAccessor.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 617
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.AbstractNestablePropertyAccessor.getPropertyValue(AbstractNestablePropertyAccessor.java:625)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/AbstractNestablePropertyAccessor.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 625
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.BeanWrapperImpl.getLocalPropertyHandler(BeanWrapperImpl.java:61)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/BeanWrapperImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 61
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.BeanWrapperImpl.getLocalPropertyHandler(BeanWrapperImpl.java:196)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/BeanWrapperImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 196
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.BeanWrapperImpl.getCachedIntrospectionResults(BeanWrapperImpl.java:165)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/BeanWrapperImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 165
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.CachedIntrospectionResults.forClass(CachedIntrospectionResults.java:155)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/CachedIntrospectionResults.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 155
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.CachedIntrospectionResults.<init>(CachedIntrospectionResults.java:277)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/CachedIntrospectionResults.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 277
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.CachedIntrospectionResults.buildGenericTypeAwarePropertyDescriptor(CachedIntrospectionResults.java:398)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/CachedIntrospectionResults.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 398
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.beans.GenericTypeAwarePropertyDescriptor.<init>(GenericTypeAwarePropertyDescriptor.java:123)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/beans/GenericTypeAwarePropertyDescriptor.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 123
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forMethodReturnType(ResolvableType.java:1359)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1359
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1399)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1399
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1432)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1432
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forMethodParameter(ResolvableType.java:1450)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1450
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.ResolvableType.forType(ResolvableType.java:1529)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/ResolvableType.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1529
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.core.SerializableTypeWrapper.forTypeProvider(SerializableTypeWrapper.java:111)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/core/SerializableTypeWrapper.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 111
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.exception.UnsupportedOperationException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unexpected UnsupportedOperationException.\nTest case: `addSpecialty(<Specialty>)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "org/springframework/samples/petclinic/vet/Vet.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 72,
+            "startColumn" : 3
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "org.springframework.samples.petclinic.vet.Vet"
+        } ]
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "VetTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 251,
+            "startColumn" : 2
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "VetTest.testAddSpecialtyThrowsUOE(VetTest.java:263)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "VetTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 263,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "org.springframework.samples.petclinic.vet.Vet.addSpecialty(Vet.java:72)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "org/springframework/samples/petclinic/vet/Vet.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 72,
+                  "startColumn" : 3
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.base/java.util.AbstractCollection.add(AbstractCollection.java:251)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "java/util/AbstractCollection.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 251
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}
